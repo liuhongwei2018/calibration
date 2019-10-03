@@ -1,0 +1,19 @@
+Package: calibration
+Type: Package
+Title: Calibration Performance Evaluation and Recalibration
+Version: 0.0.0.9000
+Author: person("Hongwei","Liu",email = "liuhongwei2022@gmail.com",
+  role = c("aut","cre"))
+Maintainer: Hongwei Liu
+Depends: R (>= 3.1.0)
+Description: Performance Evaluation for Calibration and Recalibration including 
+    calibration plot, the Hosmer-Lemeshow test, the calibration slope, Platt Scaling, 
+    and isotonic regression.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    plyr, ggplot2
+RoxygenNote: 6.1.1
+Suggests: 
+    testthat
