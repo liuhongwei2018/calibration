@@ -3,5 +3,7 @@
 export(calibration_plot)
 export(hoslem_test)
 export(isotonic_calibration)
+export(platt_calibration)
+export(slope)
 import(ggplot2)
 import(plyr)
