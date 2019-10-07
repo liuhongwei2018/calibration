@@ -4,7 +4,7 @@ Title: Calibration Performance Evaluation and Recalibration
 Version: 0.0.0.9000
 Author: Hongwei Liu
 Maintainer: Hongwei Liu <liuhongwei2022@gmail.com>
-Depends: R (>= 3.1.0)
+Depends: R (>= 3.1.0), ggplot2, plyr
 Description: Performance Evaluation for Calibration and Recalibration including 
     calibration plot, the Hosmer-Lemeshow test, the calibration slope, Platt Scaling, 
     and isotonic regression.
