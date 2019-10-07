@@ -3,7 +3,7 @@
 #'
 #' @param y                Binomial response variable used to fit model
 #' @param p                Estimated probabilities from fit model
-#' @param regularization   (FALSE/TRUE) should regularization be performed on the probabilities? (see notes)
+#' @param regularization   (\code{FALSE}/\code{TRUE}) should regularization be performed on the probabilities? (see notes)
 #'
 #' @return a vector of calibrated probabilities
 #'
