@@ -1,16 +1,17 @@
 #' @title Draws a calibration plot
-#' @description Returns a ggplot2 object of calibration plot
-#' @param y_true Vector of know labels on the test set
-#' @param y_prob Vector of probability predictions on the test set
+#' @description Returns a \code{ggplot2} object of calibration plot
+#' 
+#' @param x Vector of know labels on the test set
+#' @param y Vector of probability predictions on the test set
 #' @param bins If a single number this indicates the number of splits of the data are used to create the
 #' plot. By default, \code{bins} = 10. If a vector, these are actual cuts that will be used.
 #' @param smooths set this to TRUE if you want to draw a smoothing line using \code{\link[stats]{loess}},
 #' or \code{FALSE} to draw a point graph. By default it is \code{FALSE}.
-#' @param conf whether to show 95% confidence bands, by default it is \code{TRUE}.
+#' @param conf whether to show 95\% confidence bands, by default it is \code{TRUE}.
 #' @param aline whether to connect these points when \code{smooths = FALSE}, by default this is \code{TRUE}
-#' @param point_shape the shape of point, see \code{link[ggplot2]{aes_linetype_size_shape}}, by default 16
+#' @param point_shape the shape of point, see \code{aes_linetype_size_shape}, by default 16
 #' @param point_size the size of point, by default it is 3
-#' @param span the parameter α which controls the degree of smoothing
+#' @param span the parameter which controls the degree of smoothing
 #' @param errorbar_width the width of the whiskers, by default 0.025
 #' @param errorbar_size the size of the whiskers, by default 0.8  
 #' @return \code{ggplot2 object}
