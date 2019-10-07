@@ -4,14 +4,38 @@
 \alias{calibration_plot}
 \title{Draws a calibration plot}
 \usage{
-calibration_plot(y_true, y_prob, normalize = FALSE, smooths = F,
-  conf = T)
+calibration_plot(x, y, bins = 10, smooths = F, conf = T,
+  abline = F, point_shape = 16, point_size = 3, span = 0.9,
+  errorbar_width = 0.025, errorbar_size = 0.8)
 }
 \arguments{
-\item{y_true}{Vector of know labels on the test set}
+\item{x}{Vector of know labels on the test set}
 
-\item{y_prob}{Vector of probability predictions on the test set}
+\item{y}{Vector of probability predictions on the test set}
+
+\item{bins}{If a single number this indicates the number of splits of the data are used to create the
+plot. By default, \code{bins} = 10. If a vector, these are actual cuts that will be used.}
+
+\item{smooths}{set this to TRUE if you want to draw a smoothing line using \code{\link[stats]{loess}},
+or \code{FALSE} to draw a point graph. By default it is \code{FALSE}.}
+
+\item{conf}{whether to show 95\% confidence bands, by default it is \code{TRUE}.}
+
+\item{point_shape}{the shape of point, see \code{aes_linetype_size_shape}, by default 16}
+
+\item{point_size}{the size of point, by default it is 3}
+
+\item{span}{the parameter which controls the degree of smoothing}
+
+\item{errorbar_width}{the width of the whiskers, by default 0.025}
+
+\item{errorbar_size}{the size of the whiskers, by default 0.8}
+
+\item{aline}{whether to connect these points when \code{smooths = FALSE}, by default this is \code{TRUE}}
+}
+\value{
+\code{ggplot2 object}
 }
 \description{
-Returns a ggplot2 object of calibration plot
+Returns a \code{ggplot2} object of calibration plot
 }
