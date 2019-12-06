@@ -20,8 +20,7 @@
 calibration_plot <- function(x, y, bins = 10, smooths = F, conf = T, abline = F,
                      point_shape = 16, point_size = 3, span = 0.9, errorbar_width = 0.025, 
                      errorbar_size = 0.8){
-  #加判断  1.判断输入数据类型
-  #       2.判断输入数据是否符合要求     
+   
   
   if(length(bins) == 1) {
     num_bins <- bins
