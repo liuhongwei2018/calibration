@@ -57,12 +57,12 @@ isotonic_calibration <- function(y, p, regularization = FALSE) {
   if(!max(unique(y)) == 1) stop("y is not a valid binomial vector")
   if(!is.numeric(p)) stop("p arguments must be numeric")
   if(regularization == TRUE) {
-    p.max <- (length(y[y == 1]) + 1) / (length(y[y == 1]) + 2)  # 看不懂？
+    p.max <- (length(y[y == 1]) + 1) / (length(y[y == 1]) + 2)  
     p.min <- 1 / (length(y[y == 0]) + 2)
     p <- ifelse( p < p.min, p.min, p)
     p <- ifelse( p > p.max, p.max, p)
   }
-  idx <- duplicated(p)      #去重
+  idx <- duplicated(p)     
   idx <- which( idx == TRUE)
   p.unique <- p[-idx]
   y.unique <- y[-idx]
